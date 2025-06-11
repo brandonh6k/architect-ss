@@ -1,0 +1,26 @@
+sequenceDiagram
+    %% Pre-allocation workflow
+    participant VOS as VOS Systems
+    participant BAS as Bulk Allocation Service
+    participant DB as Database
+
+    %% Third-party provisioning workflow
+    participant C as Customer
+    participant API as DataFileUpload API
+    participant BIS as Beacon Import Service
+    participant MA as Mobile App
+
+    %% Pre-allocation sequence
+    Note over VOS,DB: Pre-allocation Workflow
+    VOS->>BAS: Provide block of CoRe Serials
+    BAS->>DB: Store available serials
+
+    %% Provisioning sequence
+    Note over C,MA: Third-party Beacon Provisioning
+    C->>API: Upload beacon CSV file
+    API->>BIS: Pass CSV for validation & processing
+    BIS->>DB: Get next available serial
+    DB->>BIS: Return allocated serial
+    BIS->>DB: Insert beacon registration
+    MA->>API: Request beacon configuration validation
+    API->>MA: Return validation results
