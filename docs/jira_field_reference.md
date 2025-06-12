@@ -38,6 +38,19 @@ jira.updateIssue({
 });
 ```
 
+## Epic Catogory
+Epic Category is required for all Jira epics.  It has the following options:
+| Category |
+|----------|  
+| Keep up with Competitors |
+| Keep the Lights On |
+| Interoperability/Compliance |
+| Differentiators |
+| Efficiency / Quality |
+| Customer Satisfaction |
+| Other |
+|----------|
+
 ## Jira Markup Reference
 
 Since Markdown doesn't work in Jira fields, use Jira's wiki markup language instead:
