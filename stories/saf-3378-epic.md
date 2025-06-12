@@ -60,7 +60,7 @@ Implement Phase 1.5 of SSO integration by enabling Azure AD B2C to authenticate 
 - **Status**: New
 - **Priority**: Priority 4
 - **Reporter**: Brandon Hunt
-- **Labels**: PI2025.3
+- **Labels**: PI2025.4
 - **Fix Version**: 6.1
 - **Created**: 2025-06-12
 - **Jira Epic**: SAF-3378
